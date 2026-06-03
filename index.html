@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Web Showcase</title>
+    <title>Interactive Web Frame</title>
     <style>
         * {
             box-sizing: border-box;
@@ -20,65 +20,34 @@
             padding: 20px;
         }
 
-        /* กรอบโชว์เว็บไซต์ */
-        .showcase-card {
+        /* กรอบโชว์และปฏิสัมพันธ์กับเว็บไซต์ */
+        .web-container {
             width: 100%;
-            max-width: 900px;
-            height: 550px;
+            max-width: 1000px;
+            height: 650px;
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e1e4e8;
-            overflow: hidden; /* บังคับให้ขอบมุมโค้งมน */
-            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d1d5db;
+            overflow: hidden; /* บังคับให้ขอบมน */
         }
-
-        /* ตกแต่งส่วนหัวให้เหมือนกรอบ Browser (ใส่หรือไม่ใส่ก็ได้) */
-        .card-header {
-            height: 40px;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e1e4e8;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            gap: 6px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        .dot-red { background-color: #ff5f56; }
-        .dot-yellow { background-color: #ffbd2e; }
-        .dot-green { background-color: #27c93f; }
 
         /* ตัวแสดงผลหน้าเว็บ */
-        .web-display {
+        .web-frame {
             width: 100%;
-            /* หักลบความสูงของ card-header ออก (550px - 40px = 510px) */
-            height: calc(100% - 40px); 
+            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="showcase-card">
-        
-        <div class="card-header">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-        </div>
-
+    <div class="web-container">
         <iframe 
             src="https://www.youtube.com/?hl=th&gl=TH&app=desktop" 
-            class="web-display"
-            sandbox="allow-scripts">
+            class="web-frame"
+            sandbox="allow-scripts allow-forms allow-same-origin">
         </iframe>
-
     </div>
 
 </body>
