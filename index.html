@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Web Frame</title>
+    <title>Playlist Showcase</Playlist>
     <style>
         * {
             box-sizing: border-box;
@@ -20,11 +20,11 @@
             padding: 20px;
         }
 
-        /* กรอบโชว์และปฏิสัมพันธ์กับเว็บไซต์ */
-        .web-container {
+        /* กรอบแสดงผลเพลย์ลิสต์ */
+        .playlist-container {
             width: 100%;
-            max-width: 1000px;
-            height: 650px;
+            max-width: 900px;
+            height: 550px;
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,6 @@
             overflow: hidden; /* บังคับให้ขอบมน */
         }
 
-        /* ตัวแสดงผลหน้าเว็บ */
         .web-frame {
             width: 100%;
             height: 100%;
@@ -42,11 +41,13 @@
 </head>
 <body>
 
-    <div class="web-container">
+    <div class="playlist-container">
         <iframe 
-            src="https://www.youtube.com/?hl=th&gl=TH&app=desktop" 
+            src="https://www.youtube.com/embed/videoseries?list=PLZhFz9PfeJnkQ08Zh4bYwqdPuHXAIoZql" 
             class="web-frame"
-            sandbox="allow-scripts allow-forms allow-same-origin">
+            sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen>
         </iframe>
     </div>
 
